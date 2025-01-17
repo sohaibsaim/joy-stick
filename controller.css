@@ -1,0 +1,65 @@
+/* Lock to landscape orientation */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Prevent zooming and scrolling */
+meta[name="viewport"] {
+    content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui";
+}
+
+/* Center the controller container */
+.controller-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* Styling for the joystick */
+.joystick {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.stick {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+/* Styling for the action buttons */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.action-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10; /* Ensure buttons are clickable by placing them above the joystick */
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}
